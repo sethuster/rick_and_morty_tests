@@ -20,8 +20,8 @@ Each language will have the following API Tests:
 | Test | Assertions | Endpoint | Notes |
 | ---- | ------- | ----- | ----| 
 | char_schema | Validate that the character schema is consistent | NA | See character schema for more information |
-| get_all_chars_paginated | Results are paginated and not all characters are returned in one go | `api/character` | |
 | get_all_chars_preamble | Preamble for characters list is accurate with count, page, next and prev pages |  `api/character` | The premble is the data above the results list |
+| get_all_chars_paginated | Results are paginated and not all characters are returned in one go | `api/character` | |
 | get_all_chars_pages | validate that the characters are different on each page and no repeated data exists |  `api/character` | |
 | get_single_character | A single character can be retireved properly | `api/character/[id]` | Characters can be retrieved by ID appropriately | 
 | get_multiple_characters_csv | multple characters can be rerieved from the API | `api/character/[id],[id],[id]` | how many characters can be retireved at once? |
