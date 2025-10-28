@@ -63,6 +63,7 @@ Each language will have the following API Tests:
 | get_location_filter_name | locations can be retrieved by name | `api/location?name="citidel of ricks"` | names of locations can be used for filtering |
 | get_location_filter_type | locations can be filtered by type | `api/location?type="space station"` | |
 | get_location_filter_dimension | locations can be filtered by dimension | `api/location?dimension=unknown` | |
+| get_location_invalid | invalid location is not retrieved and a friendly error is shown | `api/location/[invalidID]` | |
 | get_location_csv_max | get the maximum number of locations in one request | `api/location/[id],[id],[id]` | there's gotta be a max here |
 | get_location_array_max | get the maximum number of locations in one request | `api/location/[id,id,id]` | |
 | get_multiple_locations_invalid_array | The API should handle retrieving an invalid location ID in the array | `api/location/[[id],[invId],[id]]` |  |

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Episode Schema",
+  "description": "Schema for Rick and Morty episode data",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "The id of the episode."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the episode."
+    },
+    "air_date": {
+      "type": "string",
+      "description": "The air date of the episode."
+    },
+    "episode": {
+      "type": "string",
+      "description": "The code of the episode."
+    },
+    "characters": {
+      "type": "array",
+      "description": "List of characters who have been seen in the episode.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to the episode's own endpoint."
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time at which the episode was created in the database."
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "air_date",
+    "episode",
+    "characters",
+    "url",
+    "created"
+  ]
+}
+

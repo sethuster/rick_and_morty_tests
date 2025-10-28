@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Character Schema",
+  "description": "Schema for Rick and Morty character data",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "The id of the character."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the character."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Alive", "Dead", "unknown"],
+      "description": "The status of the character."
+    },
+    "species": {
+      "type": "string",
+      "description": "The species of the character."
+    },
+    "type": {
+      "type": "string",
+      "description": "The type or subspecies of the character."
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["Female", "Male", "Genderless", "unknown"],
+      "description": "The gender of the character."
+    },
+    "origin": {
+      "type": "object",
+      "description": "Name and link to the character's origin location.",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["name", "url"]
+    },
+    "location": {
+      "type": "object",
+      "description": "Name and link to the character's last known location endpoint.",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["name", "url"]
+    },
+    "image": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to the character's image. All images are 300x300px and most are medium shots or portraits since they are intended to be used as avatars."
+    },
+    "episode": {
+      "type": "array",
+      "description": "List of episodes in which this character appeared.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to the character's own URL endpoint."
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time at which the character was created in the database."
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "status",
+    "species",
+    "type",
+    "gender",
+    "origin",
+    "location",
+    "image",
+    "episode",
+    "url",
+    "created"
+  ]
+}
