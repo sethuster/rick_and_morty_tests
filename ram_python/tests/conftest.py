@@ -23,7 +23,7 @@ def api_session() -> Generator[requests.Session, None, None]:
     session.close()
 
 
-@pytest.fixture
+# @pytest.fixture
 def rick_api_base_url() -> str:
     """Base URL for the Rick and Morty API."""
     return "https://rickandmortyapi.com/api"
