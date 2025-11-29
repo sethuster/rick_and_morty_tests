@@ -6,7 +6,7 @@ install:
 
 # Run all tests
 test:
-	uv run pytest tests/ -vv
+	uv run pytest tests/ -vvs
 
 # Run tests with verbose output
 test-verbose:
